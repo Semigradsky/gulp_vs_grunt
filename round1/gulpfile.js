@@ -4,9 +4,9 @@ var concat = require('gulp-concat');
 
 gulp.task('build', function() {
   return gulp.src('src/**/*.js')
-  	.pipe(concat('min.js'))
+    .pipe(concat('min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/gulp'));
 });
 
 gulp.task('default', ['build']);

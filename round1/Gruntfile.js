@@ -1,16 +1,16 @@
 module.exports = function(grunt) {
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('../package.json'),
+
     uglify: {
       build: {
-        src: 'src/**/*.js',
-        dest: 'dist/min.js'
+        src: 'round1/src/**/*.js',
+        dest: 'round1/dist/grunt/min.js'
       }
     }
   });
-
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('build', 'uglify');
 
